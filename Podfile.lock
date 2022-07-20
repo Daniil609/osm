@@ -1,0 +1,53 @@
+PODS:
+  - Alamofire (5.1.0)
+  - KeychainAccess (4.1.0)
+  - OAuthSwift (2.1.0)
+  - OAuthSwiftAlamofire (1.0.0beta):
+    - Alamofire
+    - OAuthSwift
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - SwiftOverpassAPI (0.1.3)
+  - Tangram-es (0.17.1)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.1)
+  - KeychainAccess
+  - OAuthSwift (~> 2.1.0)
+  - OAuthSwiftAlamofire (from `https://github.com/OAuthSwift/OAuthSwiftAlamofire.git`, branch `master`)
+  - SQLite.swift
+  - SwiftOverpassAPI
+  - Tangram-es
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KeychainAccess
+    - OAuthSwift
+    - SQLite.swift
+    - SwiftOverpassAPI
+    - Tangram-es
+
+EXTERNAL SOURCES:
+  OAuthSwiftAlamofire:
+    :branch: master
+    :git: https://github.com/OAuthSwift/OAuthSwiftAlamofire.git
+
+CHECKOUT OPTIONS:
+  OAuthSwiftAlamofire:
+    :commit: 765093b8ab4ea32b2d39dd23ff4a047c68fadd21
+    :git: https://github.com/OAuthSwift/OAuthSwiftAlamofire.git
+
+SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
+  OAuthSwift: ab1675598273e04355e0282459c328e65c9ddacd
+  OAuthSwiftAlamofire: 34e6b8f231ea7fad88ea96c0ab876fa12a11180e
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SwiftOverpassAPI: c6e2f8a8c1caaaabd9f2df97433048ad49264fe5
+  Tangram-es: 628b634f7fc09d2217469b9914de00d9de49ff9d
+
+PODFILE CHECKSUM: 0e4b833244b2dcedac455bf421d62deffc076ea1
+
+COCOAPODS: 1.9.1

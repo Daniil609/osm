@@ -1,0 +1,110 @@
+default_platform(:ios)
+
+opt_out_usage
+
+SECRETS_PLIST = "./OSMSurveyor/Secrets.plist"
+CHANGELOG_PATH = "./CHANGELOG.md"
+
+platform :ios do
+  desc "Performs basic integration checks to be run before merging"
+  lane :pull_request_checks do
+    run_tests(
+      workspace: "OSMSurveyor.xcworkspace",
+      scheme: "OSMSurveyor"
+    )
+  end
+
+  desc "Push a new beta build to TestFlight"
+  lane :beta do |options|
+    ensure_git_status_clean
+
+    pull_request_checks
+
+    increment_build_number(
+      build_number: get_highest_build_number_from_git_tags() + 1
+    )
+    commit_version_bump(xcodeproj: "OSMSurveyor.xcodeproj")
+
+    # Determine the tag (e. g. 'builds/beta/1.6.5-12')
+    version_number = get_version_number(target: "OSMSurveyor")
+    build_number = get_build_number()
+    git_tag = "builds/beta/#{version_number}-#{build_number}"
+
+    # Read the "Unreleased" section of the changelog.
+    # This will later be used when uploading the build to TestFlight.
+    changelog = read_changelog(changelog_path: CHANGELOG_PATH)
+
+    # Update the changelog
+    section_identifier = "#{version_number} (#{build_number})"
+    stamp_changelog(
+      changelog_path: CHANGELOG_PATH,
+      section_identifier: section_identifier,
+      git_tag: git_tag,
+      stamp_date: 'true'
+    )
+    git_commit(
+      path: CHANGELOG_PATH,
+      message: "Update CHANGELOG.md with changes for #{section_identifier}",
+      allow_nothing_to_commit: true
+    )
+
+    update_osm_oauth_credentials(options)
+    update_jawg_access_token(options)
+
+    sync_code_signing(type: "appstore")
+
+    build_app(
+      workspace: "OSMSurveyor.xcworkspace",
+      scheme: "OSMSurveyor"
+    )
+
+    add_git_tag(tag: git_tag)
+
+    push_to_git_remote
+
+    upload_to_testflight(
+      changelog: changelog,
+      groups: ["Public link in README"]
+    )
+  end
+
+  desc "Update the OAuth1 credentials that are used for communication with OpenStreetMap.org"
+  lane :update_osm_oauth_credentials do |options|
+    consumer_key = options[:osm_consumer_key]
+    consumer_secret = options[:osm_consumer_secret]
+    if !consumer_key || !consumer_secret
+      UI.user_error!("Please provide the OAuth credentials for OSM with `osm_consumer_key` and `osm_consumer_secret`")
+    end
+
+    update_plist(
+      plist_path: SECRETS_PLIST,
+      block: proc do |plist|
+        plist[:"OSM_OAuth_ConsumerKey"] = consumer_key
+        plist[:"OSM_OAuth_ConsumerSecret"] = consumer_secret
+      end
+    )
+  end
+
+  desc "Update the access token that is used to retrieve the map vector tiles from Jawg.io"
+  lane :update_jawg_access_token do |options|
+    access_token = options[:jawg_access_token]
+    if !access_token
+      UI.user_error!("Please provide the Jawg.io access token with `jawg_access_token`")
+    end
+
+    update_plist(
+      plist_path: SECRETS_PLIST,
+      block: proc do |plist|
+        plist[:"Jawg_Access_Token"] = access_token
+      end
+    )
+  end
+
+  desc "Re-generates the app icon from the base app_icon.png in the fastlane metadata directory"
+  lane :regenerate_app_icon do
+    appicon(
+      appicon_devices: [:ipad, :iphone, :ios_marketing],
+      appicon_path: "OSMSurveyor/Assets.xcassets"
+    )
+  end
+end

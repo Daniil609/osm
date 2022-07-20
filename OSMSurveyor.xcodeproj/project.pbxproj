@@ -1,0 +1,1648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23586FDDB8B659FF937C8E72 /* Pods_OSMSurveyorTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 513E2E31F7E3F6BAD2AF4168 /* Pods_OSMSurveyorTests.framework */; };
+		3A831F2B2886B440009DBB74 /* Pods_OSMSurveyor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76B4A25348A97A383A6AA192 /* Pods_OSMSurveyor.framework */; };
+		3A831F2C2886B440009DBB74 /* Pods_OSMSurveyor.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 76B4A25348A97A383A6AA192 /* Pods_OSMSurveyor.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6416210E2433764500C4670C /* OverpassDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6416210D2433764500C4670C /* OverpassDownloader.swift */; };
+		641621112433774A00C4670C /* AddBenchBackrestQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641621102433774A00C4670C /* AddBenchBackrestQuest.swift */; };
+		641AEEA2242E4D18000CA2A2 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEEA1242E4D18000CA2A2 /* Quest.swift */; };
+		641AEEA4242E52A9000CA2A2 /* QuestDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEEA3242E52A9000CA2A2 /* QuestDataHelper.swift */; };
+		641AEEA8242E6520000CA2A2 /* Tile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEEA7242E6520000CA2A2 /* Tile.swift */; };
+		641AEEAA242E66E1000CA2A2 /* SlippyMapMathTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEEA9242E66E1000CA2A2 /* SlippyMapMathTestCase.swift */; };
+		641AEEAC242E6851000CA2A2 /* TilesRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEEAB242E6851000CA2A2 /* TilesRect.swift */; };
+		641AEEAF242E6996000CA2A2 /* BoundingBoxTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEEAE242E6996000CA2A2 /* BoundingBoxTestCase.swift */; };
+		641AEEB1242E6A5E000CA2A2 /* CoordinateTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEEB0242E6A5E000CA2A2 /* CoordinateTestCase.swift */; };
+		641AEEB4242E9E38000CA2A2 /* Double+Radians.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEEB3242E9E38000CA2A2 /* Double+Radians.swift */; };
+		641AEEB9242F7616000CA2A2 /* DownloadedTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEEB8242F7616000CA2A2 /* DownloadedTile.swift */; };
+		641AEEBB242F774E000CA2A2 /* DownloadedTileDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641AEEBA242F774E000CA2A2 /* DownloadedTileDataHelper.swift */; };
+		64554140243B9D500049AD07 /* ElementGeometryDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455413F243B9D500049AD07 /* ElementGeometryDataManagerMock.swift */; };
+		64554142243BAA0F0049AD07 /* NodeDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64554141243BAA0F0049AD07 /* NodeDataManagerMock.swift */; };
+		64554144243BABDD0049AD07 /* ElementGeometry+MakeElementGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64554143243BABDD0049AD07 /* ElementGeometry+MakeElementGeometry.swift */; };
+		64554146243BB5FB0049AD07 /* AddBusStopShelterQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64554145243BB5FB0049AD07 /* AddBusStopShelterQuest.swift */; };
+		64554149243BC06D0049AD07 /* AnnotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64554148243BC06D0049AD07 /* AnnotationManager.swift */; };
+		6455414B243BC1420049AD07 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455414A243BC1420049AD07 /* Annotation.swift */; };
+		6455414D243BD7B00049AD07 /* QuestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6455414C243BD7B00049AD07 /* QuestAssets.xcassets */; };
+		6455414F243C5B9C0049AD07 /* AnnotationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6455414E243C5B9B0049AD07 /* AnnotationManagerDelegate.swift */; };
+		64554151243C5C030049AD07 /* AnnotationManagerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64554150243C5C030049AD07 /* AnnotationManagerDelegateMock.swift */; };
+		64554154243C5CA30049AD07 /* AnnotationManagerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64554153243C5CA30049AD07 /* AnnotationManagerTestCase.swift */; };
+		64554156243C5D3C0049AD07 /* FullQuestsDataProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64554155243C5D3C0049AD07 /* FullQuestsDataProviderMock.swift */; };
+		646008B2243FB9E60015F89C /* AnnotationLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646008B1243FB9E60015F89C /* AnnotationLayerProtocol.swift */; };
+		646008B5243FBB000015F89C /* TangramAnnotationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646008B4243FBB000015F89C /* TangramAnnotationLayer.swift */; };
+		646008B7243FC5030015F89C /* map_theme in Resources */ = {isa = PBXBuildFile; fileRef = 646008B6243FC5030015F89C /* map_theme */; };
+		6470E7B42427CE69009A6AAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6470E7B32427CE69009A6AAC /* AppDelegate.swift */; };
+		6470E7B62427CE69009A6AAC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6470E7B52427CE69009A6AAC /* SceneDelegate.swift */; };
+		6470E7B82427CE69009A6AAC /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6470E7B72427CE69009A6AAC /* MapViewController.swift */; };
+		6470E7BB2427CE69009A6AAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6470E7B92427CE69009A6AAC /* Main.storyboard */; };
+		6470E7BD2427CE6A009A6AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6470E7BC2427CE6A009A6AAC /* Assets.xcassets */; };
+		6470E7C02427CE6A009A6AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6470E7BE2427CE6A009A6AAC /* LaunchScreen.storyboard */; };
+		6470E7CB2427CE6A009A6AAC /* OSMSurveyorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6470E7CA2427CE6A009A6AAC /* OSMSurveyorTests.swift */; };
+		64762E5C242DFEBC00E430B4 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64762E5B242DFEBC00E430B4 /* Database.swift */; };
+		648DD1582446DC4300AECBD0 /* AlertPresenting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648DD1572446DC4300AECBD0 /* AlertPresenting.swift */; };
+		648DD15A2446DDE700AECBD0 /* AlertPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648DD1592446DDE700AECBD0 /* AlertPresenterMock.swift */; };
+		648E3ACF24F8EAB200B2210A /* QuestManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C6A20124F8E90F00B326D6 /* QuestManagerMock.swift */; };
+		648E3AD124F8EEF400B2210A /* CameraPosition+MakeCameraPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 648E3AD024F8EEF400B2210A /* CameraPosition+MakeCameraPosition.swift */; };
+		649DEF30242E20D7001AD0E2 /* DataHelperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DEF2F242E20D7001AD0E2 /* DataHelperProtocol.swift */; };
+		649DEF33242E2162001AD0E2 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DEF32242E2162001AD0E2 /* Node.swift */; };
+		649DEF36242E222E001AD0E2 /* NodeDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DEF35242E222E001AD0E2 /* NodeDataHelper.swift */; };
+		64A77B3D24390B45000A9822 /* FullQuestsViewDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B3C24390B45000A9822 /* FullQuestsViewDataHelper.swift */; };
+		64A77B3F24390CC0000A9822 /* ElementsGeometryDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B3E24390CBF000A9822 /* ElementsGeometryDataHelper.swift */; };
+		64A77B4124390E3D000A9822 /* ElementGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B4024390E3D000A9822 /* ElementGeometry.swift */; };
+		64A77B43243923E1000A9822 /* ElementKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B42243923E1000A9822 /* ElementKey.swift */; };
+		64A77B452439B840000A9822 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B442439B840000A9822 /* Element.swift */; };
+		64A77B4A243A20DC000A9822 /* OverpassQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B49243A20DC000A9822 /* OverpassQuest.swift */; };
+		64A77B4D243A2291000A9822 /* OverpassQuestTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B4C243A2291000A9822 /* OverpassQuestTestCase.swift */; };
+		64A77B52243A2602000A9822 /* OverpassQueryExecuting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B51243A2602000A9822 /* OverpassQueryExecuting.swift */; };
+		64A77B54243A27D7000A9822 /* OverpassQuestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B53243A27D7000A9822 /* OverpassQuestManager.swift */; };
+		64A77B56243A2831000A9822 /* OverpassQuestManagerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B55243A2831000A9822 /* OverpassQuestManagerTestCase.swift */; };
+		64A77B59243A28D2000A9822 /* DownloadedQuestTypesManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B58243A28D2000A9822 /* DownloadedQuestTypesManagerMock.swift */; };
+		64A77B5B243A2ACB000A9822 /* QuestManaging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B5A243A2ACB000A9822 /* QuestManaging.swift */; };
+		64A77B5D243A3141000A9822 /* OverpassQuestProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B5C243A3141000A9822 /* OverpassQuestProviding.swift */; };
+		64A77B5F243A3186000A9822 /* OverpassQuestProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B5E243A3186000A9822 /* OverpassQuestProviderMock.swift */; };
+		64A77B61243A32A1000A9822 /* OverpassQueryExecutorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B60243A32A1000A9822 /* OverpassQueryExecutorMock.swift */; };
+		64A77B63243A344F000A9822 /* OverpassQuestMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B62243A344F000A9822 /* OverpassQuestMock.swift */; };
+		64A77B65243A4495000A9822 /* QuestElementsProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B64243A4495000A9822 /* QuestElementsProcessing.swift */; };
+		64A77B67243A45A7000A9822 /* QuestElementProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B66243A45A7000A9822 /* QuestElementProcessor.swift */; };
+		64A77B69243A45F7000A9822 /* QuestElementProcessorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B68243A45F7000A9822 /* QuestElementProcessorMock.swift */; };
+		64A77B6B243A498D000A9822 /* QuestElementProcessorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B6A243A498D000A9822 /* QuestElementProcessorTestCase.swift */; };
+		64A77B6E243A4B99000A9822 /* Node+MakeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B6D243A4B99000A9822 /* Node+MakeNode.swift */; };
+		64A77B70243A4C0E000A9822 /* BoundingBox+MakeBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A77B6F243A4C0E000A9822 /* BoundingBox+MakeBoundingBox.swift */; };
+		64B58EC7243515A000EE88C7 /* CameraPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BDCB4F242A97790098536A /* CameraPosition.swift */; };
+		64B58EC9243516EC00EE88C7 /* MapDataDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B58EC8243516EC00EE88C7 /* MapDataDownloader.swift */; };
+		64BDCB52242A98E70098536A /* MapViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BDCB51242A98E70098536A /* MapViewControllerProtocol.swift */; };
+		64BDCB54242A9C710098536A /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64BDCB53242A9C710098536A /* Secrets.plist */; };
+		64C6A1F424F7958600B326D6 /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C6A1F324F7958600B326D6 /* LocationSearchViewController.swift */; };
+		64C6A1F724F7AA0600B326D6 /* NominatimResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C6A1F624F7AA0600B326D6 /* NominatimResult.swift */; };
+		64C6A1F924F7AB0A00B326D6 /* NominatimResultProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C6A1F824F7AB0A00B326D6 /* NominatimResultProvider.swift */; };
+		64C6A20024F8E27800B326D6 /* MapDataDownloaderTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C6A1FF24F8E27800B326D6 /* MapDataDownloaderTestCase.swift */; };
+		64D4D8D22427F7F900FB900A /* OSMSurveyorFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D4D8C92427F7F900FB900A /* OSMSurveyorFramework.framework */; };
+		64D4D8D92427F7F900FB900A /* OSMSurveyorFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D4D8D82427F7F900FB900A /* OSMSurveyorFrameworkTests.swift */; };
+		64D4D8DB2427F7F900FB900A /* OSMSurveyorFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D4D8CB2427F7F900FB900A /* OSMSurveyorFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64D4D8DE2427F7F900FB900A /* OSMSurveyorFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D4D8C92427F7F900FB900A /* OSMSurveyorFramework.framework */; };
+		64D4D8DF2427F7F900FB900A /* OSMSurveyorFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 64D4D8C92427F7F900FB900A /* OSMSurveyorFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		64D4D8E92427F9B600FB900A /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D4D8E82427F9B600FB900A /* BoundingBox.swift */; };
+		64D4D8EB2427FAF700FB900A /* Coordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D4D8EA2427FAF700FB900A /* Coordinate.swift */; };
+		64D5D92E2441B1CC00AB0EC2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D92D2441B1CC00AB0EC2 /* SettingsViewController.swift */; };
+		64D5D9302441B24200AB0EC2 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D92F2441B24200AB0EC2 /* SettingsViewModel.swift */; };
+		64D5D9322441B67400AB0EC2 /* SettingsViewModelTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D9312441B67400AB0EC2 /* SettingsViewModelTestCase.swift */; };
+		64D5D9372441C86A00AB0EC2 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D9362441C86A00AB0EC2 /* SettingsCoordinator.swift */; };
+		64D5D93A2441CDD200AB0EC2 /* SettingsCoordinatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D9392441CDD200AB0EC2 /* SettingsCoordinatorMock.swift */; };
+		64D5D93C2441DAE500AB0EC2 /* AddAccountFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D93B2441DAE500AB0EC2 /* AddAccountFlowCoordinator.swift */; };
+		64D5D93F2441DD6700AB0EC2 /* OAuthHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D93E2441DD6700AB0EC2 /* OAuthHandler.swift */; };
+		64D5D9422441EAB800AB0EC2 /* AccountHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D9412441EAB800AB0EC2 /* AccountHandler.swift */; };
+		64D5D94C2441EE5B00AB0EC2 /* OSMSurveyorFrameworkMocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 64D5D94A2441EE5B00AB0EC2 /* OSMSurveyorFrameworkMocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64D5D9512441EF3D00AB0EC2 /* AccountHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D9502441EF3D00AB0EC2 /* AccountHandlerMock.swift */; };
+		64D5D9522441EF7E00AB0EC2 /* OSMSurveyorFrameworkMocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D5D9482441EE5A00AB0EC2 /* OSMSurveyorFrameworkMocks.framework */; };
+		64D5D9532441EFE400AB0EC2 /* OSMSurveyorFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64D4D8C92427F7F900FB900A /* OSMSurveyorFramework.framework */; };
+		64D5D9562441F23B00AB0EC2 /* Account+MakeAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D9552441F23B00AB0EC2 /* Account+MakeAccount.swift */; };
+		64D5D9582442121100AB0EC2 /* KeychainHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D9572442121100AB0EC2 /* KeychainHandler.swift */; };
+		64D5D95B2442143200AB0EC2 /* OpenStreetMapAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D95A2442143200AB0EC2 /* OpenStreetMapAPIClient.swift */; };
+		64D5D95D244234C000AB0EC2 /* AddAccountFlowCoordinatorTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D95C244234C000AB0EC2 /* AddAccountFlowCoordinatorTestCase.swift */; };
+		64D5D95F2442353800AB0EC2 /* OAuthHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D95E2442353800AB0EC2 /* OAuthHandlerMock.swift */; };
+		64D5D96124423B9200AB0EC2 /* OpenStreetMapAPIClientMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D96024423B9200AB0EC2 /* OpenStreetMapAPIClientMock.swift */; };
+		64D5D9632442712B00AB0EC2 /* Permission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D9622442712B00AB0EC2 /* Permission.swift */; };
+		64D5D9662442855D00AB0EC2 /* KeychainHandlerTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D9652442855D00AB0EC2 /* KeychainHandlerTestCase.swift */; };
+		64D5D9682442892D00AB0EC2 /* KeychainHandlerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D9672442892D00AB0EC2 /* KeychainHandlerMock.swift */; };
+		64D5D96D24431B1700AB0EC2 /* SettingsViewModelDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D5D96C24431B1700AB0EC2 /* SettingsViewModelDelegateMock.swift */; };
+		64D6A185243A56490097FEDD /* QuestDataManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D6A184243A56490097FEDD /* QuestDataManagerMock.swift */; };
+		64D6A187243A5C120097FEDD /* StaticOverpassQuestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D6A186243A5C120097FEDD /* StaticOverpassQuestProvider.swift */; };
+		E5B869097359A45232BF78F2 /* Pods_OSMSurveyor_OSMSurveyorFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCA560E746E2607ADEEC4B00 /* Pods_OSMSurveyor_OSMSurveyorFramework.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6470E7C72427CE6A009A6AAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6470E7A82427CE69009A6AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6470E7AF2427CE69009A6AAC;
+			remoteInfo = OSMSurveyor;
+		};
+		64D4D8D32427F7F900FB900A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6470E7A82427CE69009A6AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64D4D8C82427F7F900FB900A;
+			remoteInfo = OSMSurveyorFramework;
+		};
+		64D4D8D52427F7F900FB900A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6470E7A82427CE69009A6AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6470E7AF2427CE69009A6AAC;
+			remoteInfo = OSMSurveyor;
+		};
+		64D4D8DC2427F7F900FB900A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6470E7A82427CE69009A6AAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64D4D8C82427F7F900FB900A;
+			remoteInfo = OSMSurveyorFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		64D4D8E02427F7F900FB900A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				64D4D8DF2427F7F900FB900A /* OSMSurveyorFramework.framework in Embed Frameworks */,
+				3A831F2C2886B440009DBB74 /* Pods_OSMSurveyor.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0C35827A9A7EA6B17B7539B7 /* Pods-OSMSurveyor-OSMSurveyorFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMSurveyor-OSMSurveyorFramework.debug.xcconfig"; path = "Target Support Files/Pods-OSMSurveyor-OSMSurveyorFramework/Pods-OSMSurveyor-OSMSurveyorFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		4FB1727F69A9D8A074C0087C /* Pods-OSMSurveyor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMSurveyor.debug.xcconfig"; path = "Target Support Files/Pods-OSMSurveyor/Pods-OSMSurveyor.debug.xcconfig"; sourceTree = "<group>"; };
+		513E2E31F7E3F6BAD2AF4168 /* Pods_OSMSurveyorTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSMSurveyorTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		56B7345E362284A05DDB7CE3 /* Pods-OSMSurveyor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMSurveyor.release.xcconfig"; path = "Target Support Files/Pods-OSMSurveyor/Pods-OSMSurveyor.release.xcconfig"; sourceTree = "<group>"; };
+		6416210D2433764500C4670C /* OverpassDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassDownloader.swift; sourceTree = "<group>"; };
+		641621102433774A00C4670C /* AddBenchBackrestQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBenchBackrestQuest.swift; sourceTree = "<group>"; };
+		641AEEA1242E4D18000CA2A2 /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		641AEEA3242E52A9000CA2A2 /* QuestDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestDataHelper.swift; sourceTree = "<group>"; };
+		641AEEA7242E6520000CA2A2 /* Tile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tile.swift; sourceTree = "<group>"; };
+		641AEEA9242E66E1000CA2A2 /* SlippyMapMathTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlippyMapMathTestCase.swift; sourceTree = "<group>"; };
+		641AEEAB242E6851000CA2A2 /* TilesRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesRect.swift; sourceTree = "<group>"; };
+		641AEEAE242E6996000CA2A2 /* BoundingBoxTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBoxTestCase.swift; sourceTree = "<group>"; };
+		641AEEB0242E6A5E000CA2A2 /* CoordinateTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinateTestCase.swift; sourceTree = "<group>"; };
+		641AEEB3242E9E38000CA2A2 /* Double+Radians.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Radians.swift"; sourceTree = "<group>"; };
+		641AEEB8242F7616000CA2A2 /* DownloadedTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedTile.swift; sourceTree = "<group>"; };
+		641AEEBA242F774E000CA2A2 /* DownloadedTileDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedTileDataHelper.swift; sourceTree = "<group>"; };
+		6455413F243B9D500049AD07 /* ElementGeometryDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementGeometryDataManagerMock.swift; sourceTree = "<group>"; };
+		64554141243BAA0F0049AD07 /* NodeDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeDataManagerMock.swift; sourceTree = "<group>"; };
+		64554143243BABDD0049AD07 /* ElementGeometry+MakeElementGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ElementGeometry+MakeElementGeometry.swift"; sourceTree = "<group>"; };
+		64554145243BB5FB0049AD07 /* AddBusStopShelterQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBusStopShelterQuest.swift; sourceTree = "<group>"; };
+		64554148243BC06D0049AD07 /* AnnotationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationManager.swift; sourceTree = "<group>"; };
+		6455414A243BC1420049AD07 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		6455414C243BD7B00049AD07 /* QuestAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = QuestAssets.xcassets; sourceTree = "<group>"; };
+		6455414E243C5B9B0049AD07 /* AnnotationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationManagerDelegate.swift; sourceTree = "<group>"; };
+		64554150243C5C030049AD07 /* AnnotationManagerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationManagerDelegateMock.swift; sourceTree = "<group>"; };
+		64554153243C5CA30049AD07 /* AnnotationManagerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationManagerTestCase.swift; sourceTree = "<group>"; };
+		64554155243C5D3C0049AD07 /* FullQuestsDataProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullQuestsDataProviderMock.swift; sourceTree = "<group>"; };
+		646008B1243FB9E60015F89C /* AnnotationLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationLayerProtocol.swift; sourceTree = "<group>"; };
+		646008B4243FBB000015F89C /* TangramAnnotationLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TangramAnnotationLayer.swift; sourceTree = "<group>"; };
+		646008B6243FC5030015F89C /* map_theme */ = {isa = PBXFileReference; lastKnownFileType = folder; path = map_theme; sourceTree = "<group>"; };
+		6470E7B02427CE69009A6AAC /* OSMSurveyor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSMSurveyor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6470E7B32427CE69009A6AAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6470E7B52427CE69009A6AAC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6470E7B72427CE69009A6AAC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		6470E7BA2427CE69009A6AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6470E7BC2427CE6A009A6AAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6470E7BF2427CE6A009A6AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6470E7C12427CE6A009A6AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6470E7C62427CE6A009A6AAC /* OSMSurveyorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSMSurveyorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6470E7CA2427CE6A009A6AAC /* OSMSurveyorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSMSurveyorTests.swift; sourceTree = "<group>"; };
+		6470E7CC2427CE6A009A6AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64762E5B242DFEBC00E430B4 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		648DD1572446DC4300AECBD0 /* AlertPresenting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenting.swift; sourceTree = "<group>"; };
+		648DD1592446DDE700AECBD0 /* AlertPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenterMock.swift; sourceTree = "<group>"; };
+		648E3AD024F8EEF400B2210A /* CameraPosition+MakeCameraPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CameraPosition+MakeCameraPosition.swift"; sourceTree = "<group>"; };
+		649DEF2F242E20D7001AD0E2 /* DataHelperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelperProtocol.swift; sourceTree = "<group>"; };
+		649DEF32242E2162001AD0E2 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		649DEF35242E222E001AD0E2 /* NodeDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeDataHelper.swift; sourceTree = "<group>"; };
+		64A77B3C24390B45000A9822 /* FullQuestsViewDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullQuestsViewDataHelper.swift; sourceTree = "<group>"; };
+		64A77B3E24390CBF000A9822 /* ElementsGeometryDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementsGeometryDataHelper.swift; sourceTree = "<group>"; };
+		64A77B4024390E3D000A9822 /* ElementGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementGeometry.swift; sourceTree = "<group>"; };
+		64A77B42243923E1000A9822 /* ElementKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementKey.swift; sourceTree = "<group>"; };
+		64A77B442439B840000A9822 /* Element.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Element.swift; sourceTree = "<group>"; };
+		64A77B49243A20DC000A9822 /* OverpassQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassQuest.swift; sourceTree = "<group>"; };
+		64A77B4C243A2291000A9822 /* OverpassQuestTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassQuestTestCase.swift; sourceTree = "<group>"; };
+		64A77B51243A2602000A9822 /* OverpassQueryExecuting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassQueryExecuting.swift; sourceTree = "<group>"; };
+		64A77B53243A27D7000A9822 /* OverpassQuestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassQuestManager.swift; sourceTree = "<group>"; };
+		64A77B55243A2831000A9822 /* OverpassQuestManagerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassQuestManagerTestCase.swift; sourceTree = "<group>"; };
+		64A77B58243A28D2000A9822 /* DownloadedQuestTypesManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadedQuestTypesManagerMock.swift; sourceTree = "<group>"; };
+		64A77B5A243A2ACB000A9822 /* QuestManaging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestManaging.swift; sourceTree = "<group>"; };
+		64A77B5C243A3141000A9822 /* OverpassQuestProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassQuestProviding.swift; sourceTree = "<group>"; };
+		64A77B5E243A3186000A9822 /* OverpassQuestProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassQuestProviderMock.swift; sourceTree = "<group>"; };
+		64A77B60243A32A1000A9822 /* OverpassQueryExecutorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassQueryExecutorMock.swift; sourceTree = "<group>"; };
+		64A77B62243A344F000A9822 /* OverpassQuestMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverpassQuestMock.swift; sourceTree = "<group>"; };
+		64A77B64243A4495000A9822 /* QuestElementsProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestElementsProcessing.swift; sourceTree = "<group>"; };
+		64A77B66243A45A7000A9822 /* QuestElementProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestElementProcessor.swift; sourceTree = "<group>"; };
+		64A77B68243A45F7000A9822 /* QuestElementProcessorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestElementProcessorMock.swift; sourceTree = "<group>"; };
+		64A77B6A243A498D000A9822 /* QuestElementProcessorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestElementProcessorTestCase.swift; sourceTree = "<group>"; };
+		64A77B6D243A4B99000A9822 /* Node+MakeNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Node+MakeNode.swift"; sourceTree = "<group>"; };
+		64A77B6F243A4C0E000A9822 /* BoundingBox+MakeBoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BoundingBox+MakeBoundingBox.swift"; sourceTree = "<group>"; };
+		64B58EC8243516EC00EE88C7 /* MapDataDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataDownloader.swift; sourceTree = "<group>"; };
+		64BDCB4F242A97790098536A /* CameraPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPosition.swift; sourceTree = "<group>"; };
+		64BDCB51242A98E70098536A /* MapViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerProtocol.swift; sourceTree = "<group>"; };
+		64BDCB53242A9C710098536A /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
+		64C6A1F324F7958600B326D6 /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
+		64C6A1F624F7AA0600B326D6 /* NominatimResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominatimResult.swift; sourceTree = "<group>"; };
+		64C6A1F824F7AB0A00B326D6 /* NominatimResultProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NominatimResultProvider.swift; sourceTree = "<group>"; };
+		64C6A1FF24F8E27800B326D6 /* MapDataDownloaderTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDataDownloaderTestCase.swift; sourceTree = "<group>"; };
+		64C6A20124F8E90F00B326D6 /* QuestManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestManagerMock.swift; sourceTree = "<group>"; };
+		64D4D8C92427F7F900FB900A /* OSMSurveyorFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSMSurveyorFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D4D8CB2427F7F900FB900A /* OSMSurveyorFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSMSurveyorFramework.h; sourceTree = "<group>"; };
+		64D4D8CC2427F7F900FB900A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64D4D8D12427F7F900FB900A /* OSMSurveyorFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSMSurveyorFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D4D8D82427F7F900FB900A /* OSMSurveyorFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSMSurveyorFrameworkTests.swift; sourceTree = "<group>"; };
+		64D4D8DA2427F7F900FB900A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64D4D8E82427F9B600FB900A /* BoundingBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundingBox.swift; sourceTree = "<group>"; };
+		64D4D8EA2427FAF700FB900A /* Coordinate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinate.swift; sourceTree = "<group>"; };
+		64D5D92D2441B1CC00AB0EC2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		64D5D92F2441B24200AB0EC2 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		64D5D9312441B67400AB0EC2 /* SettingsViewModelTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTestCase.swift; sourceTree = "<group>"; };
+		64D5D9362441C86A00AB0EC2 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
+		64D5D9392441CDD200AB0EC2 /* SettingsCoordinatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorMock.swift; sourceTree = "<group>"; };
+		64D5D93B2441DAE500AB0EC2 /* AddAccountFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountFlowCoordinator.swift; sourceTree = "<group>"; };
+		64D5D93E2441DD6700AB0EC2 /* OAuthHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthHandler.swift; sourceTree = "<group>"; };
+		64D5D9412441EAB800AB0EC2 /* AccountHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHandler.swift; sourceTree = "<group>"; };
+		64D5D9482441EE5A00AB0EC2 /* OSMSurveyorFrameworkMocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OSMSurveyorFrameworkMocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64D5D94A2441EE5B00AB0EC2 /* OSMSurveyorFrameworkMocks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSMSurveyorFrameworkMocks.h; sourceTree = "<group>"; };
+		64D5D94B2441EE5B00AB0EC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64D5D9502441EF3D00AB0EC2 /* AccountHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountHandlerMock.swift; sourceTree = "<group>"; };
+		64D5D9552441F23B00AB0EC2 /* Account+MakeAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+MakeAccount.swift"; sourceTree = "<group>"; };
+		64D5D9572442121100AB0EC2 /* KeychainHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHandler.swift; sourceTree = "<group>"; };
+		64D5D95A2442143200AB0EC2 /* OpenStreetMapAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenStreetMapAPIClient.swift; sourceTree = "<group>"; };
+		64D5D95C244234C000AB0EC2 /* AddAccountFlowCoordinatorTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountFlowCoordinatorTestCase.swift; sourceTree = "<group>"; };
+		64D5D95E2442353800AB0EC2 /* OAuthHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthHandlerMock.swift; sourceTree = "<group>"; };
+		64D5D96024423B9200AB0EC2 /* OpenStreetMapAPIClientMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenStreetMapAPIClientMock.swift; sourceTree = "<group>"; };
+		64D5D9622442712B00AB0EC2 /* Permission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Permission.swift; sourceTree = "<group>"; };
+		64D5D9652442855D00AB0EC2 /* KeychainHandlerTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHandlerTestCase.swift; sourceTree = "<group>"; };
+		64D5D9672442892D00AB0EC2 /* KeychainHandlerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHandlerMock.swift; sourceTree = "<group>"; };
+		64D5D96C24431B1700AB0EC2 /* SettingsViewModelDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelDelegateMock.swift; sourceTree = "<group>"; };
+		64D6A184243A56490097FEDD /* QuestDataManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestDataManagerMock.swift; sourceTree = "<group>"; };
+		64D6A186243A5C120097FEDD /* StaticOverpassQuestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticOverpassQuestProvider.swift; sourceTree = "<group>"; };
+		76B4A25348A97A383A6AA192 /* Pods_OSMSurveyor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSMSurveyor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD3DC620CE0C35D284964823 /* Pods-OSMSurveyor-OSMSurveyorFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMSurveyor-OSMSurveyorFramework.release.xcconfig"; path = "Target Support Files/Pods-OSMSurveyor-OSMSurveyorFramework/Pods-OSMSurveyor-OSMSurveyorFramework.release.xcconfig"; sourceTree = "<group>"; };
+		B0EA8B24B2A20F78911FB805 /* Pods-OSMSurveyorTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMSurveyorTests.release.xcconfig"; path = "Target Support Files/Pods-OSMSurveyorTests/Pods-OSMSurveyorTests.release.xcconfig"; sourceTree = "<group>"; };
+		DCA560E746E2607ADEEC4B00 /* Pods_OSMSurveyor_OSMSurveyorFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OSMSurveyor_OSMSurveyorFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA00406545F816F6A11BBFC0 /* Pods-OSMSurveyorTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSMSurveyorTests.debug.xcconfig"; path = "Target Support Files/Pods-OSMSurveyorTests/Pods-OSMSurveyorTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6470E7AD2427CE69009A6AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D4D8DE2427F7F900FB900A /* OSMSurveyorFramework.framework in Frameworks */,
+				3A831F2B2886B440009DBB74 /* Pods_OSMSurveyor.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6470E7C32427CE6A009A6AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D5D9522441EF7E00AB0EC2 /* OSMSurveyorFrameworkMocks.framework in Frameworks */,
+				23586FDDB8B659FF937C8E72 /* Pods_OSMSurveyorTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D4D8C62427F7F900FB900A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5B869097359A45232BF78F2 /* Pods_OSMSurveyor_OSMSurveyorFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D4D8CE2427F7F900FB900A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D4D8D22427F7F900FB900A /* OSMSurveyorFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D5D9452441EE5A00AB0EC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D5D9532441EFE400AB0EC2 /* OSMSurveyorFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6416210F2433770300C4670C /* Quests */ = {
+			isa = PBXGroup;
+			children = (
+				64A77B5A243A2ACB000A9822 /* QuestManaging.swift */,
+			);
+			path = Quests;
+			sourceTree = "<group>";
+		};
+		641AEEAD242E698D000CA2A2 /* OSM */ = {
+			isa = PBXGroup;
+			children = (
+				641AEEAE242E6996000CA2A2 /* BoundingBoxTestCase.swift */,
+				641AEEB0242E6A5E000CA2A2 /* CoordinateTestCase.swift */,
+			);
+			path = OSM;
+			sourceTree = "<group>";
+		};
+		641AEEB2242E9E2A000CA2A2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				641AEEB3242E9E38000CA2A2 /* Double+Radians.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		64554147243BC0560049AD07 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				64554148243BC06D0049AD07 /* AnnotationManager.swift */,
+				6455414E243C5B9B0049AD07 /* AnnotationManagerDelegate.swift */,
+				6455414A243BC1420049AD07 /* Annotation.swift */,
+				646008B1243FB9E60015F89C /* AnnotationLayerProtocol.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
+		64554152243C5C790049AD07 /* Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				64554153243C5CA30049AD07 /* AnnotationManagerTestCase.swift */,
+			);
+			path = Annotations;
+			sourceTree = "<group>";
+		};
+		646008B3243FBAEF0015F89C /* Tangram */ = {
+			isa = PBXGroup;
+			children = (
+				646008B4243FBB000015F89C /* TangramAnnotationLayer.swift */,
+			);
+			path = Tangram;
+			sourceTree = "<group>";
+		};
+		6470E7A72427CE69009A6AAC = {
+			isa = PBXGroup;
+			children = (
+				6470E7B22427CE69009A6AAC /* OSMSurveyor */,
+				6470E7C92427CE6A009A6AAC /* OSMSurveyorTests */,
+				64D4D8CA2427F7F900FB900A /* OSMSurveyorFramework */,
+				64D4D8D72427F7F900FB900A /* OSMSurveyorFrameworkTests */,
+				64D5D9492441EE5B00AB0EC2 /* OSMSurveyorFrameworkMocks */,
+				6470E7B12427CE69009A6AAC /* Products */,
+				D418A5971843D39FF0D9BA2E /* Pods */,
+				C17268EA23BEA6AEB95D4E8B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6470E7B12427CE69009A6AAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6470E7B02427CE69009A6AAC /* OSMSurveyor.app */,
+				6470E7C62427CE6A009A6AAC /* OSMSurveyorTests.xctest */,
+				64D4D8C92427F7F900FB900A /* OSMSurveyorFramework.framework */,
+				64D4D8D12427F7F900FB900A /* OSMSurveyorFrameworkTests.xctest */,
+				64D5D9482441EE5A00AB0EC2 /* OSMSurveyorFrameworkMocks.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6470E7B22427CE69009A6AAC /* OSMSurveyor */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D9332441B8B200AB0EC2 /* Extensions */,
+				64D5D92C2441B1A600AB0EC2 /* Settings */,
+				646008B3243FBAEF0015F89C /* Tangram */,
+				64BDCB4E242A975A0098536A /* Map */,
+				64C6A1F224F7954C00B326D6 /* LocationSearch */,
+				648DD1572446DC4300AECBD0 /* AlertPresenting.swift */,
+				6470E7B32427CE69009A6AAC /* AppDelegate.swift */,
+				6470E7B52427CE69009A6AAC /* SceneDelegate.swift */,
+				6470E7B92427CE69009A6AAC /* Main.storyboard */,
+				6470E7BC2427CE6A009A6AAC /* Assets.xcassets */,
+				6470E7BE2427CE6A009A6AAC /* LaunchScreen.storyboard */,
+				6470E7C12427CE6A009A6AAC /* Info.plist */,
+				64BDCB53242A9C710098536A /* Secrets.plist */,
+				646008B6243FC5030015F89C /* map_theme */,
+			);
+			path = OSMSurveyor;
+			sourceTree = "<group>";
+		};
+		6470E7C92427CE6A009A6AAC /* OSMSurveyorTests */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D9382441CDA600AB0EC2 /* Mocks */,
+				6470E7CA2427CE6A009A6AAC /* OSMSurveyorTests.swift */,
+				6470E7CC2427CE6A009A6AAC /* Info.plist */,
+				64D5D9312441B67400AB0EC2 /* SettingsViewModelTestCase.swift */,
+				64D5D95C244234C000AB0EC2 /* AddAccountFlowCoordinatorTestCase.swift */,
+			);
+			path = OSMSurveyorTests;
+			sourceTree = "<group>";
+		};
+		64734B0F24331FF4002234E8 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				6416210D2433764500C4670C /* OverpassDownloader.swift */,
+				64B58EC8243516EC00EE88C7 /* MapDataDownloader.swift */,
+				64A77B64243A4495000A9822 /* QuestElementsProcessing.swift */,
+				64A77B66243A45A7000A9822 /* QuestElementProcessor.swift */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		64762E5A242DFDDE00E430B4 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				649DEF34242E21E3001AD0E2 /* DataHelpers */,
+				64762E5B242DFEBC00E430B4 /* Database.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		649DEF31242E2157001AD0E2 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				649DEF32242E2162001AD0E2 /* Node.swift */,
+				641AEEA1242E4D18000CA2A2 /* Quest.swift */,
+				641AEEB8242F7616000CA2A2 /* DownloadedTile.swift */,
+				64A77B4024390E3D000A9822 /* ElementGeometry.swift */,
+				64A77B42243923E1000A9822 /* ElementKey.swift */,
+				64A77B442439B840000A9822 /* Element.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		649DEF34242E21E3001AD0E2 /* DataHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				649DEF2F242E20D7001AD0E2 /* DataHelperProtocol.swift */,
+				649DEF35242E222E001AD0E2 /* NodeDataHelper.swift */,
+				641AEEA3242E52A9000CA2A2 /* QuestDataHelper.swift */,
+				641AEEBA242F774E000CA2A2 /* DownloadedTileDataHelper.swift */,
+				64A77B3E24390CBF000A9822 /* ElementsGeometryDataHelper.swift */,
+				64A77B3C24390B45000A9822 /* FullQuestsViewDataHelper.swift */,
+			);
+			path = DataHelpers;
+			sourceTree = "<group>";
+		};
+		64A77B462439F790000A9822 /* Overpass */ = {
+			isa = PBXGroup;
+			children = (
+				64A77B49243A20DC000A9822 /* OverpassQuest.swift */,
+				641621102433774A00C4670C /* AddBenchBackrestQuest.swift */,
+				64554145243BB5FB0049AD07 /* AddBusStopShelterQuest.swift */,
+				64A77B51243A2602000A9822 /* OverpassQueryExecuting.swift */,
+				64A77B53243A27D7000A9822 /* OverpassQuestManager.swift */,
+				64A77B5C243A3141000A9822 /* OverpassQuestProviding.swift */,
+				64D6A186243A5C120097FEDD /* StaticOverpassQuestProvider.swift */,
+			);
+			path = Overpass;
+			sourceTree = "<group>";
+		};
+		64A77B4B243A2283000A9822 /* Overpass */ = {
+			isa = PBXGroup;
+			children = (
+				64A77B4C243A2291000A9822 /* OverpassQuestTestCase.swift */,
+				64A77B55243A2831000A9822 /* OverpassQuestManagerTestCase.swift */,
+			);
+			path = Overpass;
+			sourceTree = "<group>";
+		};
+		64A77B57243A28AC000A9822 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				64A77B58243A28D2000A9822 /* DownloadedQuestTypesManagerMock.swift */,
+				64A77B5E243A3186000A9822 /* OverpassQuestProviderMock.swift */,
+				64A77B60243A32A1000A9822 /* OverpassQueryExecutorMock.swift */,
+				64A77B62243A344F000A9822 /* OverpassQuestMock.swift */,
+				64A77B68243A45F7000A9822 /* QuestElementProcessorMock.swift */,
+				64D6A184243A56490097FEDD /* QuestDataManagerMock.swift */,
+				6455413F243B9D500049AD07 /* ElementGeometryDataManagerMock.swift */,
+				64554141243BAA0F0049AD07 /* NodeDataManagerMock.swift */,
+				64554150243C5C030049AD07 /* AnnotationManagerDelegateMock.swift */,
+				64554155243C5D3C0049AD07 /* FullQuestsDataProviderMock.swift */,
+				64D5D9502441EF3D00AB0EC2 /* AccountHandlerMock.swift */,
+				64D5D95E2442353800AB0EC2 /* OAuthHandlerMock.swift */,
+				64D5D96024423B9200AB0EC2 /* OpenStreetMapAPIClientMock.swift */,
+				64C6A20124F8E90F00B326D6 /* QuestManagerMock.swift */,
+				64D5D9672442892D00AB0EC2 /* KeychainHandlerMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		64A77B6C243A4B8D000A9822 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				64A77B6D243A4B99000A9822 /* Node+MakeNode.swift */,
+				64A77B6F243A4C0E000A9822 /* BoundingBox+MakeBoundingBox.swift */,
+				64554143243BABDD0049AD07 /* ElementGeometry+MakeElementGeometry.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		64B58ECA2435191100EE88C7 /* Download */ = {
+			isa = PBXGroup;
+			children = (
+				64A77B6A243A498D000A9822 /* QuestElementProcessorTestCase.swift */,
+				64C6A1FF24F8E27800B326D6 /* MapDataDownloaderTestCase.swift */,
+			);
+			path = Download;
+			sourceTree = "<group>";
+		};
+		64BDCB4E242A975A0098536A /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				64BDCB51242A98E70098536A /* MapViewControllerProtocol.swift */,
+				6470E7B72427CE69009A6AAC /* MapViewController.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		64C6A1F224F7954C00B326D6 /* LocationSearch */ = {
+			isa = PBXGroup;
+			children = (
+				64C6A1F324F7958600B326D6 /* LocationSearchViewController.swift */,
+			);
+			path = LocationSearch;
+			sourceTree = "<group>";
+		};
+		64C6A1F524F7A9F300B326D6 /* Nominatim */ = {
+			isa = PBXGroup;
+			children = (
+				64C6A1F624F7AA0600B326D6 /* NominatimResult.swift */,
+				64C6A1F824F7AB0A00B326D6 /* NominatimResultProvider.swift */,
+			);
+			path = Nominatim;
+			sourceTree = "<group>";
+		};
+		64D4D8CA2427F7F900FB900A /* OSMSurveyorFramework */ = {
+			isa = PBXGroup;
+			children = (
+				64C6A1F524F7A9F300B326D6 /* Nominatim */,
+				64D5D9592442140D00AB0EC2 /* OpenStreetMapAPI */,
+				64D5D9402441EAA100AB0EC2 /* Accounts */,
+				64D5D93D2441DD3F00AB0EC2 /* OAuth */,
+				64554147243BC0560049AD07 /* Annotations */,
+				64A77B462439F790000A9822 /* Overpass */,
+				6416210F2433770300C4670C /* Quests */,
+				64734B0F24331FF4002234E8 /* Download */,
+				641AEEB2242E9E2A000CA2A2 /* Extensions */,
+				64762E5A242DFDDE00E430B4 /* Database */,
+				649DEF31242E2157001AD0E2 /* Entities */,
+				64D4D8E72427F87D00FB900A /* OSM */,
+				64BDCB4F242A97790098536A /* CameraPosition.swift */,
+				64D4D8CB2427F7F900FB900A /* OSMSurveyorFramework.h */,
+				64D4D8CC2427F7F900FB900A /* Info.plist */,
+				6455414C243BD7B00049AD07 /* QuestAssets.xcassets */,
+			);
+			path = OSMSurveyorFramework;
+			sourceTree = "<group>";
+		};
+		64D4D8D72427F7F900FB900A /* OSMSurveyorFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D9642442855100AB0EC2 /* Accounts */,
+				64A77B6C243A4B8D000A9822 /* Factories */,
+				64554152243C5C790049AD07 /* Annotations */,
+				64A77B4B243A2283000A9822 /* Overpass */,
+				64B58ECA2435191100EE88C7 /* Download */,
+				641AEEAD242E698D000CA2A2 /* OSM */,
+				64D4D8D82427F7F900FB900A /* OSMSurveyorFrameworkTests.swift */,
+				64D4D8DA2427F7F900FB900A /* Info.plist */,
+				641AEEA9242E66E1000CA2A2 /* SlippyMapMathTestCase.swift */,
+			);
+			path = OSMSurveyorFrameworkTests;
+			sourceTree = "<group>";
+		};
+		64D4D8E72427F87D00FB900A /* OSM */ = {
+			isa = PBXGroup;
+			children = (
+				64D4D8E82427F9B600FB900A /* BoundingBox.swift */,
+				64D4D8EA2427FAF700FB900A /* Coordinate.swift */,
+				641AEEA7242E6520000CA2A2 /* Tile.swift */,
+				641AEEAB242E6851000CA2A2 /* TilesRect.swift */,
+			);
+			path = OSM;
+			sourceTree = "<group>";
+		};
+		64D5D92C2441B1A600AB0EC2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D92D2441B1CC00AB0EC2 /* SettingsViewController.swift */,
+				64D5D92F2441B24200AB0EC2 /* SettingsViewModel.swift */,
+				64D5D9362441C86A00AB0EC2 /* SettingsCoordinator.swift */,
+				64D5D93B2441DAE500AB0EC2 /* AddAccountFlowCoordinator.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		64D5D9332441B8B200AB0EC2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		64D5D9382441CDA600AB0EC2 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D9392441CDD200AB0EC2 /* SettingsCoordinatorMock.swift */,
+				64D5D96C24431B1700AB0EC2 /* SettingsViewModelDelegateMock.swift */,
+				648DD1592446DDE700AECBD0 /* AlertPresenterMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		64D5D93D2441DD3F00AB0EC2 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D93E2441DD6700AB0EC2 /* OAuthHandler.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		64D5D9402441EAA100AB0EC2 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D9412441EAB800AB0EC2 /* AccountHandler.swift */,
+				64D5D9572442121100AB0EC2 /* KeychainHandler.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		64D5D9492441EE5B00AB0EC2 /* OSMSurveyorFrameworkMocks */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D9542441F22E00AB0EC2 /* Factories */,
+				64A77B57243A28AC000A9822 /* Mocks */,
+				64D5D94A2441EE5B00AB0EC2 /* OSMSurveyorFrameworkMocks.h */,
+				64D5D94B2441EE5B00AB0EC2 /* Info.plist */,
+			);
+			path = OSMSurveyorFrameworkMocks;
+			sourceTree = "<group>";
+		};
+		64D5D9542441F22E00AB0EC2 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D9552441F23B00AB0EC2 /* Account+MakeAccount.swift */,
+				648E3AD024F8EEF400B2210A /* CameraPosition+MakeCameraPosition.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		64D5D9592442140D00AB0EC2 /* OpenStreetMapAPI */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D95A2442143200AB0EC2 /* OpenStreetMapAPIClient.swift */,
+				64D5D9622442712B00AB0EC2 /* Permission.swift */,
+			);
+			path = OpenStreetMapAPI;
+			sourceTree = "<group>";
+		};
+		64D5D9642442855100AB0EC2 /* Accounts */ = {
+			isa = PBXGroup;
+			children = (
+				64D5D9652442855D00AB0EC2 /* KeychainHandlerTestCase.swift */,
+			);
+			path = Accounts;
+			sourceTree = "<group>";
+		};
+		C17268EA23BEA6AEB95D4E8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76B4A25348A97A383A6AA192 /* Pods_OSMSurveyor.framework */,
+				513E2E31F7E3F6BAD2AF4168 /* Pods_OSMSurveyorTests.framework */,
+				DCA560E746E2607ADEEC4B00 /* Pods_OSMSurveyor_OSMSurveyorFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D418A5971843D39FF0D9BA2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FB1727F69A9D8A074C0087C /* Pods-OSMSurveyor.debug.xcconfig */,
+				56B7345E362284A05DDB7CE3 /* Pods-OSMSurveyor.release.xcconfig */,
+				FA00406545F816F6A11BBFC0 /* Pods-OSMSurveyorTests.debug.xcconfig */,
+				B0EA8B24B2A20F78911FB805 /* Pods-OSMSurveyorTests.release.xcconfig */,
+				0C35827A9A7EA6B17B7539B7 /* Pods-OSMSurveyor-OSMSurveyorFramework.debug.xcconfig */,
+				AD3DC620CE0C35D284964823 /* Pods-OSMSurveyor-OSMSurveyorFramework.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		64D4D8C42427F7F900FB900A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D4D8DB2427F7F900FB900A /* OSMSurveyorFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D5D9432441EE5A00AB0EC2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D5D94C2441EE5B00AB0EC2 /* OSMSurveyorFrameworkMocks.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		6470E7AF2427CE69009A6AAC /* OSMSurveyor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6470E7CF2427CE6A009A6AAC /* Build configuration list for PBXNativeTarget "OSMSurveyor" */;
+			buildPhases = (
+				50E156807514D0A0C2B01BB1 /* [CP] Check Pods Manifest.lock */,
+				B3D9A2CB36E3418DFFAC6410 /* [CP] Prepare Artifacts */,
+				6470E7AC2427CE69009A6AAC /* Sources */,
+				6470E7AD2427CE69009A6AAC /* Frameworks */,
+				6470E7AE2427CE69009A6AAC /* Resources */,
+				C0A88700583CA1C428CA6919 /* [CP] Embed Pods Frameworks */,
+				64D4D8E02427F7F900FB900A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64D4D8DD2427F7F900FB900A /* PBXTargetDependency */,
+			);
+			name = OSMSurveyor;
+			productName = OSMSurveyor;
+			productReference = 6470E7B02427CE69009A6AAC /* OSMSurveyor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6470E7C52427CE6A009A6AAC /* OSMSurveyorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6470E7D22427CE6A009A6AAC /* Build configuration list for PBXNativeTarget "OSMSurveyorTests" */;
+			buildPhases = (
+				47F876EC207083011AD45927 /* [CP] Check Pods Manifest.lock */,
+				6470E7C22427CE6A009A6AAC /* Sources */,
+				6470E7C32427CE6A009A6AAC /* Frameworks */,
+				6470E7C42427CE6A009A6AAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6470E7C82427CE6A009A6AAC /* PBXTargetDependency */,
+			);
+			name = OSMSurveyorTests;
+			productName = OSMSurveyorTests;
+			productReference = 6470E7C62427CE6A009A6AAC /* OSMSurveyorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		64D4D8C82427F7F900FB900A /* OSMSurveyorFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64D4D8E52427F7F900FB900A /* Build configuration list for PBXNativeTarget "OSMSurveyorFramework" */;
+			buildPhases = (
+				6D5AD03C15312104624E50B7 /* [CP] Check Pods Manifest.lock */,
+				64D4D8C42427F7F900FB900A /* Headers */,
+				64D4D8C52427F7F900FB900A /* Sources */,
+				64D4D8C62427F7F900FB900A /* Frameworks */,
+				64D4D8C72427F7F900FB900A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSMSurveyorFramework;
+			productName = OSMSurveyorFramework;
+			productReference = 64D4D8C92427F7F900FB900A /* OSMSurveyorFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		64D4D8D02427F7F900FB900A /* OSMSurveyorFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64D4D8E62427F7F900FB900A /* Build configuration list for PBXNativeTarget "OSMSurveyorFrameworkTests" */;
+			buildPhases = (
+				64D4D8CD2427F7F900FB900A /* Sources */,
+				64D4D8CE2427F7F900FB900A /* Frameworks */,
+				64D4D8CF2427F7F900FB900A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64D4D8D42427F7F900FB900A /* PBXTargetDependency */,
+				64D4D8D62427F7F900FB900A /* PBXTargetDependency */,
+			);
+			name = OSMSurveyorFrameworkTests;
+			productName = OSMSurveyorFrameworkTests;
+			productReference = 64D4D8D12427F7F900FB900A /* OSMSurveyorFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		64D5D9472441EE5A00AB0EC2 /* OSMSurveyorFrameworkMocks */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64D5D94D2441EE5B00AB0EC2 /* Build configuration list for PBXNativeTarget "OSMSurveyorFrameworkMocks" */;
+			buildPhases = (
+				64D5D9432441EE5A00AB0EC2 /* Headers */,
+				64D5D9442441EE5A00AB0EC2 /* Sources */,
+				64D5D9452441EE5A00AB0EC2 /* Frameworks */,
+				64D5D9462441EE5A00AB0EC2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSMSurveyorFrameworkMocks;
+			productName = OSMSurveyorFrameworkMocks;
+			productReference = 64D5D9482441EE5A00AB0EC2 /* OSMSurveyorFrameworkMocks.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6470E7A82427CE69009A6AAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Wolfgang Timme";
+				TargetAttributes = {
+					6470E7AF2427CE69009A6AAC = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					6470E7C52427CE6A009A6AAC = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 6470E7AF2427CE69009A6AAC;
+					};
+					64D4D8C82427F7F900FB900A = {
+						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
+					};
+					64D4D8D02427F7F900FB900A = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 6470E7AF2427CE69009A6AAC;
+					};
+					64D5D9472441EE5A00AB0EC2 = {
+						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
+					};
+				};
+			};
+			buildConfigurationList = 6470E7AB2427CE69009A6AAC /* Build configuration list for PBXProject "OSMSurveyor" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6470E7A72427CE69009A6AAC;
+			productRefGroup = 6470E7B12427CE69009A6AAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6470E7AF2427CE69009A6AAC /* OSMSurveyor */,
+				6470E7C52427CE6A009A6AAC /* OSMSurveyorTests */,
+				64D4D8C82427F7F900FB900A /* OSMSurveyorFramework */,
+				64D4D8D02427F7F900FB900A /* OSMSurveyorFrameworkTests */,
+				64D5D9472441EE5A00AB0EC2 /* OSMSurveyorFrameworkMocks */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6470E7AE2427CE69009A6AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6470E7C02427CE6A009A6AAC /* LaunchScreen.storyboard in Resources */,
+				64BDCB54242A9C710098536A /* Secrets.plist in Resources */,
+				6470E7BD2427CE6A009A6AAC /* Assets.xcassets in Resources */,
+				646008B7243FC5030015F89C /* map_theme in Resources */,
+				6470E7BB2427CE69009A6AAC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6470E7C42427CE6A009A6AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D4D8C72427F7F900FB900A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6455414D243BD7B00049AD07 /* QuestAssets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D4D8CF2427F7F900FB900A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D5D9462441EE5A00AB0EC2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47F876EC207083011AD45927 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OSMSurveyorTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50E156807514D0A0C2B01BB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OSMSurveyor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D5AD03C15312104624E50B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OSMSurveyor-OSMSurveyorFramework-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3D9A2CB36E3418DFFAC6410 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OSMSurveyor/Pods-OSMSurveyor-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OSMSurveyor/Pods-OSMSurveyor-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OSMSurveyor/Pods-OSMSurveyor-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0A88700583CA1C428CA6919 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OSMSurveyor/Pods-OSMSurveyor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-OSMSurveyor/Pods-OSMSurveyor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OSMSurveyor/Pods-OSMSurveyor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6470E7AC2427CE69009A6AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648DD1582446DC4300AECBD0 /* AlertPresenting.swift in Sources */,
+				6470E7B82427CE69009A6AAC /* MapViewController.swift in Sources */,
+				646008B5243FBB000015F89C /* TangramAnnotationLayer.swift in Sources */,
+				6470E7B42427CE69009A6AAC /* AppDelegate.swift in Sources */,
+				64D5D9372441C86A00AB0EC2 /* SettingsCoordinator.swift in Sources */,
+				64BDCB52242A98E70098536A /* MapViewControllerProtocol.swift in Sources */,
+				6470E7B62427CE69009A6AAC /* SceneDelegate.swift in Sources */,
+				64D5D93C2441DAE500AB0EC2 /* AddAccountFlowCoordinator.swift in Sources */,
+				64C6A1F424F7958600B326D6 /* LocationSearchViewController.swift in Sources */,
+				64D5D92E2441B1CC00AB0EC2 /* SettingsViewController.swift in Sources */,
+				64D5D9302441B24200AB0EC2 /* SettingsViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6470E7C22427CE6A009A6AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D5D95D244234C000AB0EC2 /* AddAccountFlowCoordinatorTestCase.swift in Sources */,
+				64D5D96D24431B1700AB0EC2 /* SettingsViewModelDelegateMock.swift in Sources */,
+				6470E7CB2427CE6A009A6AAC /* OSMSurveyorTests.swift in Sources */,
+				64D5D93A2441CDD200AB0EC2 /* SettingsCoordinatorMock.swift in Sources */,
+				648DD15A2446DDE700AECBD0 /* AlertPresenterMock.swift in Sources */,
+				64D5D9322441B67400AB0EC2 /* SettingsViewModelTestCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D4D8C52427F7F900FB900A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D5D9422441EAB800AB0EC2 /* AccountHandler.swift in Sources */,
+				6455414F243C5B9C0049AD07 /* AnnotationManagerDelegate.swift in Sources */,
+				641621112433774A00C4670C /* AddBenchBackrestQuest.swift in Sources */,
+				64A77B54243A27D7000A9822 /* OverpassQuestManager.swift in Sources */,
+				64D5D9632442712B00AB0EC2 /* Permission.swift in Sources */,
+				64A77B5B243A2ACB000A9822 /* QuestManaging.swift in Sources */,
+				64C6A1F724F7AA0600B326D6 /* NominatimResult.swift in Sources */,
+				64A77B43243923E1000A9822 /* ElementKey.swift in Sources */,
+				641AEEA2242E4D18000CA2A2 /* Quest.swift in Sources */,
+				641AEEAC242E6851000CA2A2 /* TilesRect.swift in Sources */,
+				64B58EC7243515A000EE88C7 /* CameraPosition.swift in Sources */,
+				64D6A187243A5C120097FEDD /* StaticOverpassQuestProvider.swift in Sources */,
+				64762E5C242DFEBC00E430B4 /* Database.swift in Sources */,
+				64B58EC9243516EC00EE88C7 /* MapDataDownloader.swift in Sources */,
+				64A77B5D243A3141000A9822 /* OverpassQuestProviding.swift in Sources */,
+				64554146243BB5FB0049AD07 /* AddBusStopShelterQuest.swift in Sources */,
+				649DEF36242E222E001AD0E2 /* NodeDataHelper.swift in Sources */,
+				64D4D8E92427F9B600FB900A /* BoundingBox.swift in Sources */,
+				649DEF33242E2162001AD0E2 /* Node.swift in Sources */,
+				649DEF30242E20D7001AD0E2 /* DataHelperProtocol.swift in Sources */,
+				641AEEB4242E9E38000CA2A2 /* Double+Radians.swift in Sources */,
+				641AEEBB242F774E000CA2A2 /* DownloadedTileDataHelper.swift in Sources */,
+				64A77B3F24390CC0000A9822 /* ElementsGeometryDataHelper.swift in Sources */,
+				64D5D93F2441DD6700AB0EC2 /* OAuthHandler.swift in Sources */,
+				6455414B243BC1420049AD07 /* Annotation.swift in Sources */,
+				641AEEA8242E6520000CA2A2 /* Tile.swift in Sources */,
+				64A77B4A243A20DC000A9822 /* OverpassQuest.swift in Sources */,
+				64A77B52243A2602000A9822 /* OverpassQueryExecuting.swift in Sources */,
+				64A77B4124390E3D000A9822 /* ElementGeometry.swift in Sources */,
+				64A77B67243A45A7000A9822 /* QuestElementProcessor.swift in Sources */,
+				646008B2243FB9E60015F89C /* AnnotationLayerProtocol.swift in Sources */,
+				64A77B3D24390B45000A9822 /* FullQuestsViewDataHelper.swift in Sources */,
+				6416210E2433764500C4670C /* OverpassDownloader.swift in Sources */,
+				64D4D8EB2427FAF700FB900A /* Coordinate.swift in Sources */,
+				641AEEB9242F7616000CA2A2 /* DownloadedTile.swift in Sources */,
+				641AEEA4242E52A9000CA2A2 /* QuestDataHelper.swift in Sources */,
+				64D5D95B2442143200AB0EC2 /* OpenStreetMapAPIClient.swift in Sources */,
+				64D5D9582442121100AB0EC2 /* KeychainHandler.swift in Sources */,
+				64A77B452439B840000A9822 /* Element.swift in Sources */,
+				64A77B65243A4495000A9822 /* QuestElementsProcessing.swift in Sources */,
+				64C6A1F924F7AB0A00B326D6 /* NominatimResultProvider.swift in Sources */,
+				64554149243BC06D0049AD07 /* AnnotationManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D4D8CD2427F7F900FB900A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648E3ACF24F8EAB200B2210A /* QuestManagerMock.swift in Sources */,
+				64A77B6B243A498D000A9822 /* QuestElementProcessorTestCase.swift in Sources */,
+				64A77B59243A28D2000A9822 /* DownloadedQuestTypesManagerMock.swift in Sources */,
+				64D4D8D92427F7F900FB900A /* OSMSurveyorFrameworkTests.swift in Sources */,
+				64A77B69243A45F7000A9822 /* QuestElementProcessorMock.swift in Sources */,
+				64554140243B9D500049AD07 /* ElementGeometryDataManagerMock.swift in Sources */,
+				641AEEAF242E6996000CA2A2 /* BoundingBoxTestCase.swift in Sources */,
+				64554142243BAA0F0049AD07 /* NodeDataManagerMock.swift in Sources */,
+				64554156243C5D3C0049AD07 /* FullQuestsDataProviderMock.swift in Sources */,
+				64554144243BABDD0049AD07 /* ElementGeometry+MakeElementGeometry.swift in Sources */,
+				64A77B6E243A4B99000A9822 /* Node+MakeNode.swift in Sources */,
+				64A77B4D243A2291000A9822 /* OverpassQuestTestCase.swift in Sources */,
+				64D6A185243A56490097FEDD /* QuestDataManagerMock.swift in Sources */,
+				64554151243C5C030049AD07 /* AnnotationManagerDelegateMock.swift in Sources */,
+				64A77B70243A4C0E000A9822 /* BoundingBox+MakeBoundingBox.swift in Sources */,
+				64A77B5F243A3186000A9822 /* OverpassQuestProviderMock.swift in Sources */,
+				64C6A20024F8E27800B326D6 /* MapDataDownloaderTestCase.swift in Sources */,
+				64A77B56243A2831000A9822 /* OverpassQuestManagerTestCase.swift in Sources */,
+				64D5D9662442855D00AB0EC2 /* KeychainHandlerTestCase.swift in Sources */,
+				64554154243C5CA30049AD07 /* AnnotationManagerTestCase.swift in Sources */,
+				641AEEAA242E66E1000CA2A2 /* SlippyMapMathTestCase.swift in Sources */,
+				64A77B63243A344F000A9822 /* OverpassQuestMock.swift in Sources */,
+				641AEEB1242E6A5E000CA2A2 /* CoordinateTestCase.swift in Sources */,
+				64A77B61243A32A1000A9822 /* OverpassQueryExecutorMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64D5D9442441EE5A00AB0EC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64D5D9512441EF3D00AB0EC2 /* AccountHandlerMock.swift in Sources */,
+				64D5D95F2442353800AB0EC2 /* OAuthHandlerMock.swift in Sources */,
+				64D5D96124423B9200AB0EC2 /* OpenStreetMapAPIClientMock.swift in Sources */,
+				648E3AD124F8EEF400B2210A /* CameraPosition+MakeCameraPosition.swift in Sources */,
+				64D5D9562441F23B00AB0EC2 /* Account+MakeAccount.swift in Sources */,
+				64D5D9682442892D00AB0EC2 /* KeychainHandlerMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6470E7C82427CE6A009A6AAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6470E7AF2427CE69009A6AAC /* OSMSurveyor */;
+			targetProxy = 6470E7C72427CE6A009A6AAC /* PBXContainerItemProxy */;
+		};
+		64D4D8D42427F7F900FB900A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64D4D8C82427F7F900FB900A /* OSMSurveyorFramework */;
+			targetProxy = 64D4D8D32427F7F900FB900A /* PBXContainerItemProxy */;
+		};
+		64D4D8D62427F7F900FB900A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6470E7AF2427CE69009A6AAC /* OSMSurveyor */;
+			targetProxy = 64D4D8D52427F7F900FB900A /* PBXContainerItemProxy */;
+		};
+		64D4D8DD2427F7F900FB900A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64D4D8C82427F7F900FB900A /* OSMSurveyorFramework */;
+			targetProxy = 64D4D8DC2427F7F900FB900A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6470E7B92427CE69009A6AAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6470E7BA2427CE69009A6AAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6470E7BE2427CE6A009A6AAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6470E7BF2427CE6A009A6AAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6470E7CD2427CE6A009A6AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6470E7CE2427CE6A009A6AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6470E7D02427CE6A009A6AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FB1727F69A9D8A074C0087C /* Pods-OSMSurveyor.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94GYYQVAQ4;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = OSMSurveyor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.wtimme.OSMSurveyor.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6470E7D12427CE6A009A6AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56B7345E362284A05DDB7CE3 /* Pods-OSMSurveyor.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94GYYQVAQ4;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = OSMSurveyor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.wtimme.OSMSurveyor.test;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6470E7D32427CE6A009A6AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA00406545F816F6A11BBFC0 /* Pods-OSMSurveyorTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94GYYQVAQ4;
+				INFOPLIST_FILE = OSMSurveyorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.wtimme.OSMSurveyorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSMSurveyor.app/OSMSurveyor";
+			};
+			name = Debug;
+		};
+		6470E7D42427CE6A009A6AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0EA8B24B2A20F78911FB805 /* Pods-OSMSurveyorTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94GYYQVAQ4;
+				INFOPLIST_FILE = OSMSurveyorTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.wtimme.OSMSurveyorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSMSurveyor.app/OSMSurveyor";
+			};
+			name = Release;
+		};
+		64D4D8E12427F7F900FB900A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C35827A9A7EA6B17B7539B7 /* Pods-OSMSurveyor-OSMSurveyorFramework.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 15;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94GYYQVAQ4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 15;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = OSMSurveyorFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.wtimme.OSMSurveyorFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64D4D8E22427F7F900FB900A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD3DC620CE0C35D284964823 /* Pods-OSMSurveyor-OSMSurveyorFramework.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 15;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94GYYQVAQ4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 15;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = OSMSurveyorFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.wtimme.OSMSurveyorFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		64D4D8E32427F7F900FB900A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94GYYQVAQ4;
+				INFOPLIST_FILE = OSMSurveyorFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.wtimme.OSMSurveyorFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSMSurveyor.app/OSMSurveyor";
+			};
+			name = Debug;
+		};
+		64D4D8E42427F7F900FB900A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 94GYYQVAQ4;
+				INFOPLIST_FILE = OSMSurveyorFrameworkTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.wtimme.OSMSurveyorFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OSMSurveyor.app/OSMSurveyor";
+			};
+			name = Release;
+		};
+		64D5D94E2441EE5B00AB0EC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 15;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94GYYQVAQ4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 15;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OSMSurveyorFrameworkMocks/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.wtimme.OSMSurveyorFrameworkMocks;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64D5D94F2441EE5B00AB0EC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 15;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94GYYQVAQ4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 15;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = OSMSurveyorFrameworkMocks/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.wtimme.OSMSurveyorFrameworkMocks;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6470E7AB2427CE69009A6AAC /* Build configuration list for PBXProject "OSMSurveyor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6470E7CD2427CE6A009A6AAC /* Debug */,
+				6470E7CE2427CE6A009A6AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6470E7CF2427CE6A009A6AAC /* Build configuration list for PBXNativeTarget "OSMSurveyor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6470E7D02427CE6A009A6AAC /* Debug */,
+				6470E7D12427CE6A009A6AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6470E7D22427CE6A009A6AAC /* Build configuration list for PBXNativeTarget "OSMSurveyorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6470E7D32427CE6A009A6AAC /* Debug */,
+				6470E7D42427CE6A009A6AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64D4D8E52427F7F900FB900A /* Build configuration list for PBXNativeTarget "OSMSurveyorFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64D4D8E12427F7F900FB900A /* Debug */,
+				64D4D8E22427F7F900FB900A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64D4D8E62427F7F900FB900A /* Build configuration list for PBXNativeTarget "OSMSurveyorFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64D4D8E32427F7F900FB900A /* Debug */,
+				64D4D8E42427F7F900FB900A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64D5D94D2441EE5B00AB0EC2 /* Build configuration list for PBXNativeTarget "OSMSurveyorFrameworkMocks" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64D5D94E2441EE5B00AB0EC2 /* Debug */,
+				64D5D94F2441EE5B00AB0EC2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6470E7A82427CE69009A6AAC /* Project object */;
+}
